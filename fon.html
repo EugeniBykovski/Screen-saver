@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Fon</title>
+
+<link rel="stylesheet" type="text/css" href="./fon.css">
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="wrapper">
+	<h1>Hello World!</h1>
+</div>
+
+<div class="welcome-section content-hidden">
+	<div class="content-wrap">
+		<ul class="fly-in-text">
+			<li>I</li>
+			<li>N</li>
+			<li>T</li>
+			<li>R</li>
+			<li>O</li>
+		</ul>
+
+		<a href="#" class="enter-button">ENTER</a>
+	</div>
+
+
+<script type="text/javascript">
+	$(function() {
+		var welcomeSection = $('.welcome-section'),
+		enterButton = welcomeSection.find('.enter-button');
+
+		setTimeout(function() {
+			welcomeSection.removeClass('content-hidden');
+		},800);
+
+		enterButton.on('click', function(e) {
+			e.preventDefault();
+			welcomeSection.addClass('content-hidden').fadeOut();
+		});
+	});
+</script>
+
+</body>
+</html>
